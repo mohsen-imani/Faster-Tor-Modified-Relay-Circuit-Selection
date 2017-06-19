@@ -1,0 +1,3 @@
+src/or/tor_main.o: src/or/tor_main.c micro-revision.i
+
+micro-revision.i:

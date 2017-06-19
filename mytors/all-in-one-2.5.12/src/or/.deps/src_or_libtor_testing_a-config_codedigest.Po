@@ -1,0 +1,4 @@
+src/or/src_or_libtor_testing_a-config_codedigest.o: \
+ src/or/config_codedigest.c src/or/or_sha1.i
+
+src/or/or_sha1.i:

@@ -1,0 +1,13 @@
+For setting up each of option you should set some option in the tor config file.
+
+	For running the code as pure vanilla tor with no modification:
+	VANILLA 1
+	For running the code as CAR (congestion-aware routing):
+	VANILLA 2
+	For evaluating different stream attachment schemes:
+	VANILLA 3
+	For running the code as all-in-one:
+	VANILLA 0
+
+
+VANILLA == 0 needs more configurations.
