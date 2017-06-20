@@ -714,7 +714,8 @@ print 'We are simulating with adversary who owns {0}% total bw, single guard sta
 if single_guard == 1: print "Guard enabled "
 else: print "Guard disabled "
 
-
+if not os.path.exists("./data"):
+    os.makedirs("./data")
 
 # pick the clients' locations
 output =  open(os.path.join(PATH_TO_REQUIREMENTS,'clients.info'),'r')
