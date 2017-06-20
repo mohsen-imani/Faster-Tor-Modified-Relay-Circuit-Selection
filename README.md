@@ -18,6 +18,7 @@ MYIP: the client's IP address.
 MYLAT: the client's latitude.
 MYLON: the client's longitude.
 ClientOnly: this parameter should be always 1 because our modifications are only on the client side.
+
 VANILLA: 
 - 1: runs the code as the vanilla Tor, all our methods will be deactivated
 - 2: activates our circuit selection mechanisms.
@@ -57,7 +58,7 @@ This setting activates our relay selection mechanism. Parameters that should be 
 - LAMBDA: it should be set to a value between 0 and 100. It is the lambda in our design. Please check out our paper for the role of this parameter.
 - CIRC_LIFE_TIME_ISEC: It kills the unused circuits after CIRC_LIFE_TIME_ISEC minutes. The default is 5 minutes.
 - MIN_NUMBER_OF_CIRC_FOR_EACH_DEST: It checks to have MIN_NUMBER_OF_CIRC_FOR_EACH_DEST circuits to each popular destination.
-- For choosing   CIRC_SELECT, please check function circuit_get_best_all_in_one in mytors/all-in-one-2.5.12/src/or/circuituse.c to find different circuit selection mechanism in this case. We have define so many circuit selection mechanisms  for this case.
+- For choosing   CIRC_SELECT, please check function circuit_get_best_all_in_one in mytors/all-in-one-2.5.12/src/or/circuituse.c to find different circuit selection mechanism in this case. We have defined so many circuit selection mechanisms  for this case.
 
 
 
@@ -65,6 +66,7 @@ This setting activates our relay selection mechanism. Parameters that should be 
 
 # References
 [1]. Wang, T., Bauer, K., Forero, C., and Goldberg, I. Congestion-aware path selection for Tor. In FC (February 2012).
+
 [2]. Wacek, C., Tan, H., Bauer, K., and Sherr, M. An empirical evaluation of relay selection in Tor. In NDSS (February 2013).
 
 
