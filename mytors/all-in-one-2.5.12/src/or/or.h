@@ -4281,7 +4281,7 @@ typedef struct {
   int MAX_BETA;
   int BETA;
   int P_PARAM;
-  int ALPHA_MOHSEN;
+  int ALPHA_ISEC;
   int LAMBDA;
   int MIN_NUMBER_OF_CIRC_FOR_EACH_DEST;
   int CONG_TIME_RTT;

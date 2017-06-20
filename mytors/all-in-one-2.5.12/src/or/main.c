@@ -2484,7 +2484,7 @@ tor_init(int argc, char *argv[])
 	log_debug(LD_CIRC, "@iSec:%s:CONFIG:BETA:%d:", get_options()->MYIP, get_options()->BETA);
 	log_debug(LD_CIRC, "@iSec:%s:CONFIG:MAX_BETA:%d:", get_options()->MYIP, get_options()->MAX_BETA);
 	log_debug(LD_CIRC, "@iSec:%s:CONFIG:P_PARAM:%d:", get_options()->MYIP, get_options()->P_PARAM);
-	log_debug(LD_CIRC, "@iSec:%s:CONFIG:ALPHA_MOHSEN:%d:", get_options()->MYIP, get_options()->ALPHA_MOHSEN);
+	log_debug(LD_CIRC, "@iSec:%s:CONFIG:ALPHA_ISEC:%d:", get_options()->MYIP, get_options()->ALPHA_ISEC);
 	log_debug(LD_CIRC, "@iSec:%s:CONFIG:LAMBDA:%d:", get_options()->MYIP, get_options()->LAMBDA);
 	log_debug(LD_CIRC, "@iSec:%s:CONFIG:MIN_NUMBER_OF_CIRC_FOR_EACH_DEST:%d:", get_options()->MYIP, get_options()->MIN_NUMBER_OF_CIRC_FOR_EACH_DEST);
 	log_debug(LD_CIRC, "@iSec:%s:CONFIG:CONG_TIME_RTT:%d:", get_options()->MYIP, get_options()->CONG_TIME_RTT);

@@ -185,7 +185,7 @@ static config_var_t option_vars_[] = {
   V(BETA,                         INT,     "4"),//Mohsen
   V(MAX_BETA,                     INT,     "20"),//Mohsen
   V(P_PARAM,                      INT,     "17"),//Mohsen
-  V(ALPHA_MOHSEN,                 INT,     "50"),//Mohsen
+  V(ALPHA_ISEC,                 INT,     "50"),//Mohsen
   V(LAMBDA,                  INT,     "97"),//Mohsen
   V(MIN_NUMBER_OF_CIRC_FOR_EACH_DEST,INT,     "1"),//Mohsen
   V(CONG_TIME_RTT,                 INT,     "300"),//Mohsen

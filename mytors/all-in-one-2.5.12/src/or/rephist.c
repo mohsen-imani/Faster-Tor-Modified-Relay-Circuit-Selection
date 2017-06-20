@@ -3039,17 +3039,17 @@ double change_distance_weights(double wd,bandwidth_weight_rule_t rule){
 
 //#####################################################################################
 double compute_weight_moh(double bw, double max_bw, double dis, double max_dis,bandwidth_weight_rule_t rule){
-  	double a = ((double)get_options()->ALPHA_MOHSEN)/100.0;
+  	double a = ((double)get_options()->ALPHA_ISEC)/100.0;
 
 	if (get_options()->CIRC_SELECT == 10){
 		if ((rule == WEIGHT_FOR_GUARD || rule == WEIGHT_FOR_DIR)){
-			a = ((double)get_options()->ALPHA_MOHSEN)/100.0;
+			a = ((double)get_options()->ALPHA_ISEC)/100.0;
 		}else{
 			a = 1.0;
 		}
 
 	}else{
-		a = ((double)get_options()->ALPHA_MOHSEN)/100.0;
+		a = ((double)get_options()->ALPHA_ISEC)/100.0;
 		if ((rule == WEIGHT_FOR_GUARD || rule == WEIGHT_FOR_DIR) && (get_options()->COMBINED_WEIGHT == 1)){
 			a = a - 0.2;
 			if (a  < 0)

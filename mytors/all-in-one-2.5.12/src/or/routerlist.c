@@ -5669,7 +5669,7 @@ int give_me_best_node(u64_dbl_t **weights, const smartlist_t *sl, bandwidth_weig
 	u64_dbl_t *weight_tmp;
 
 	log_info(LD_CIRC,"@iSec:%s:BEST NODE:%d:BETWEEN:%f,%f:TO:%f,%f:DONE",get_options()->MYIP,rule,lat, lon, exit_lat, exit_lon);
-	if(get_options()->ALPHA_MOHSEN == 100){ // we selected based on BW, now we break the tie by distance
+	if(get_options()->ALPHA_ISEC == 100){ // we selected based on BW, now we break the tie by distance
 
 		weight_tmp = tor_malloc_zero(sizeof(u64_dbl_t)*smartlist_len(sl));
 		log_info(LD_CIRC, "@iSec:%s: breaking the tie by distance ",get_options()->MYIP);
@@ -5704,7 +5704,7 @@ int give_me_best_node(u64_dbl_t **weights, const smartlist_t *sl, bandwidth_weig
 	return 1;
 	} //first IF
 
-	if (get_options()->ALPHA_MOHSEN == 0){ 
+	if (get_options()->ALPHA_ISEC == 0){ 
 
 		  weight_tmp = tor_calloc(smartlist_len(sl), sizeof(u64_dbl_t));
 		  log_info(LD_CIRC,"@iSec:%s: breaking the tie by BW ",get_options()->MYIP);
