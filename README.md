@@ -2,12 +2,12 @@
 This repo contains the source code of our project on improving the Tor performance. The project has two parts: Modified Circuit Selection and Modified Relay Selection. We implemented our changes on Tor version 2.5.12. Our modified Tor source code is in directory mytors/all-in-one.
 # Circuit Selection.
 The client's traffic in Tor goes through a three-hop encrypted channel, called a circuit. When the user makes a request, such as for a webpage, Tor attaches the new stream (by opening a SOCKS connection) to a circuit. The Tor client builds circuits preemptively based on the client's use or immediately if there is no current circuit to handle the stream. Tor currently does not use any performance criteria in selecting a circuit. In this project, we evaluate using the length of the circuits, their congestion, the Round Trip Time (RTT), or a combination of them in choosing a fast circuit. We also find that the number of available circuits in Tor is often small, between one and three circuits, such that picking the best circuit for performance does not have much effect in practice. As the number of available circuits increases, the chance of finding a fast and high performance circuit should increase. 
-For more information, check out our paper: 
+For more information, check out our paper: https://arxiv.org/abs/1608.07343
 
 # Relay Selection.
 For circuit selection to be effective, some of the available circuits must be reasonably high performing. To improve the chances of this, we modify the relay selection mechanism to build short and high-bandwidth circuits. Tor clients select paths in a way that balances traffic load among the relays according to their advertised bandwidths, but they do not make any consideration for the locations of relays relative to the clients, their destinations, or the other relays in the path. Paths can jump around the globe, which is  intuitively good for anonymity but measurably bad for performance. Prior work has examined improving path selection in Tor for better performance, considering factors such as bandwidth, congestion, latency, and location.
 Wacek et al [2]. performed a comprehensive study of path selection, and they found that congestion-aware routing [1] offers the best combination of performance and anonymity among the tested approaches. They also found that approaches that emphasized latency but failed to consider bandwidth had poor performance, and they suggested that an approach that optimized both latency and bandwidth could do better than any of their tested approaches. In this project, we take on this suggestion and explore designs that address both criteria.
-For more information, check out our paper: 
+For more information, check out our paper: https://arxiv.org/abs/1608.07343
 
 
 
