@@ -2924,7 +2924,7 @@ choose_good_exit_server_general_isec(int need_uptime, int need_capacity, float l
 const node_t *
 choose_good_entry_server_isec(uint8_t purpose, cpath_build_state_t *state, float lat, float lon)
 {
-
+ // Here we select the guard relay.
   const node_t *choice;
   smartlist_t *excluded;
   const or_options_t *options = get_options();
