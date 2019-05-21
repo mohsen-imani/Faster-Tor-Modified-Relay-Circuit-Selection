@@ -182,6 +182,7 @@ def valid_ases():
 
 
 def ipquery(ip):
+    'Returns the lat and lon for the IP'
     data = rawdata.record_by_name(ip)
     if (data == None):
         return None
@@ -189,6 +190,7 @@ def ipquery(ip):
 
 
 def geoquery(ip):
+    'returns the 2 letter country code for the IP'
     data = rawdata.record_by_name(ip)
     if (data == None):
         return None
